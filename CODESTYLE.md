@@ -150,3 +150,9 @@ It should never describe what a function does not do.
 Consider the docstring the most detailed instruction manual for the code.
 The rules about [naming](#naming) are most important here, especially 3 (one word per concept) and 4 (consistent naming).
 
+## Error messages
+Error messages have to be concise and at best actionable.
+They tell the user what went wrong, ideally on the abstraction level of the interface they are interacting with.
+If possible, the message suggests what to change to avoid the error.
+Figuring out what the user needs to change should not introduce extra complexity.
+
