@@ -145,6 +145,8 @@ Commented-out code is never allowed, ever.
 ## Docstrings
 Docstrings focus on **exactly what** a function does, **not** the **how** and **why**.
 Technical details about the implementation and it's design decisions should be kept out of the docstring.
+It should never describe what a function does not do.
 
-Consider this the most detailed instruction manual for the code.
+Consider the docstring the most detailed instruction manual for the code.
 The rules about [naming](#naming) are most important here, especially 3 (one word per concept) and 4 (consistent naming).
+
