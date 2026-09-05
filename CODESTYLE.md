@@ -71,7 +71,7 @@ High level concepts should not be mixed minute details.
 
 ```py
 X, y = generate_training_dataset()
-X = X.loc[~X["customer_id"].str.startswith("XYZ")] # this should not be here
+X = X.loc[~X["customer_id"].str.startswith("XYZ")]  # this should not be here
 model = train_model(X, y)
 ```
 
@@ -132,13 +132,15 @@ It makes the resulting tables dimensions dependent on the previous tables conten
 
 
 ## Comments
-The older a comment is, and the farther away it is from the code it describes, the more likely it is to be just plain wrong.
+If you feel like writing a comment, that is a sign your code is not expressive enough.
+First, try to make code more expressive with better [naming](#naming).
 
-If they can not be avoided, comments should only explain **why** something is done a certain way - if the reason for it is not apparent from the names of the variables and functions.
+If they can not be avoided, comments should only explain **why** something is done a certain way - for example if the behavior of an imported library is unintuitive.
 Comments can explain intent, but should **never** explain **what** happens.
 If they do it is most often a sign that the naming of the function or variables is insufficient.
 Generally, if a comment can be avoided by better naming or making a new function, it should be.
 
+If you have to write a comment, keep it precise and short.
 Commented-out code is never allowed, ever.
 
 
@@ -149,6 +151,7 @@ It should never describe what a function does not do.
 
 Consider the docstring the most detailed instruction manual for the code.
 The rules about [naming](#naming) are most important here, especially 3 (one word per concept) and 4 (consistent naming).
+
 
 ## Error messages
 Error messages have to be concise and at best actionable.
